@@ -1,6 +1,6 @@
 <?php
 
-namespace Grimzy\LaravelMysqlSpatial\Exceptions;
+namespace MysqlSpatial\LaravelMysqlSpatial\Exceptions;
 
 class InvalidGeoJsonException extends \RuntimeException
 {

@@ -3,13 +3,13 @@
 namespace Eloquent;
 
 use BaseTestCase;
-use Grimzy\LaravelMysqlSpatial\Eloquent\Builder;
-use Grimzy\LaravelMysqlSpatial\Eloquent\SpatialExpression;
-use Grimzy\LaravelMysqlSpatial\Eloquent\SpatialTrait;
-use Grimzy\LaravelMysqlSpatial\MysqlConnection;
-use Grimzy\LaravelMysqlSpatial\Types\LineString;
-use Grimzy\LaravelMysqlSpatial\Types\Point;
-use Grimzy\LaravelMysqlSpatial\Types\Polygon;
+use MysqlSpatial\LaravelMysqlSpatial\Eloquent\Builder;
+use MysqlSpatial\LaravelMysqlSpatial\Eloquent\SpatialExpression;
+use MysqlSpatial\LaravelMysqlSpatial\Eloquent\SpatialTrait;
+use MysqlSpatial\LaravelMysqlSpatial\MysqlConnection;
+use MysqlSpatial\LaravelMysqlSpatial\Types\LineString;
+use MysqlSpatial\LaravelMysqlSpatial\Types\Point;
+use MysqlSpatial\LaravelMysqlSpatial\Types\Polygon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Database\Query\Grammars\MySqlGrammar;
@@ -20,7 +20,7 @@ class BuilderTest extends BaseTestCase
     protected $builder;
     protected $queryBuilder;
 
-    protected function setUp()
+    protected function setUp():void
     {
         $connection = Mockery::mock(MysqlConnection::class)->makePartial();
         $grammar = Mockery::mock(MySqlGrammar::class)->makePartial();

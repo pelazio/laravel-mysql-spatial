@@ -1,11 +1,11 @@
 <?php
 
-use Grimzy\LaravelMysqlSpatial\Types\GeometryCollection;
-use Grimzy\LaravelMysqlSpatial\Types\LineString;
-use Grimzy\LaravelMysqlSpatial\Types\MultiPoint;
-use Grimzy\LaravelMysqlSpatial\Types\MultiPolygon;
-use Grimzy\LaravelMysqlSpatial\Types\Point;
-use Grimzy\LaravelMysqlSpatial\Types\Polygon;
+use MysqlSpatial\LaravelMysqlSpatial\Types\GeometryCollection;
+use MysqlSpatial\LaravelMysqlSpatial\Types\LineString;
+use MysqlSpatial\LaravelMysqlSpatial\Types\MultiPoint;
+use MysqlSpatial\LaravelMysqlSpatial\Types\MultiPolygon;
+use MysqlSpatial\LaravelMysqlSpatial\Types\Point;
+use MysqlSpatial\LaravelMysqlSpatial\Types\Polygon;
 
 class SridSpatialTest extends IntegrationBaseTestCase
 {
@@ -114,7 +114,7 @@ class SridSpatialTest extends IntegrationBaseTestCase
             'of the geometry is 0, but the SRID of the column is 3857. '.
             'Consider changing the SRID of the geometry or the SRID property '.
             'of the column. (SQL: insert into `with_srid` (`location`) values '.
-            '(ST_GeomFromText(POINT(2 1), 0, \'axis-order=long-lat\')))'
+            '(ST_GeomFromText(POINT(2 1), 0)))'
         );
         $geo->save();
     }

@@ -3,18 +3,18 @@
 namespace Schema;
 
 use BaseTestCase;
-use Grimzy\LaravelMysqlSpatial\Schema\Blueprint;
+use MysqlSpatial\LaravelMysqlSpatial\Schema\Blueprint;
 use Illuminate\Database\Schema\ColumnDefinition;
 use Mockery;
 
 class BlueprintTest extends BaseTestCase
 {
     /**
-     * @var \Grimzy\LaravelMysqlSpatial\Schema\Blueprint
+     * @var \MysqlSpatial\LaravelMysqlSpatial\Schema\Blueprint
      */
     protected $blueprint;
 
-    public function setUp()
+    public function setUp():void
     {
         parent::setUp();
 
