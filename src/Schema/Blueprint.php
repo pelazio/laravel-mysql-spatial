@@ -1,6 +1,6 @@
 <?php
 
-namespace Grimzy\LaravelMysqlSpatial\Schema;
+namespace MysqlSpatial\LaravelMysqlSpatial\Schema;
 
 use Illuminate\Database\Schema\Blueprint as IlluminateBlueprint;
 
